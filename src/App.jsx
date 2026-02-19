@@ -1,17 +1,37 @@
 
 import './App.css'
 import ToDo from './todo'
+import Actor from './Actor'
+import Singer from './Singers';
 
 function App() {
-  
+
+  const actors = ["JKR", "Sallu", "Alu", "SRK"];
+  const singers = [
+    { id:'1', name :'Jabir', age:'10' },
+    { id:'2', name :'Aabir', age:'20' },
+    { id:'3', name :'Kabir', age:'30' }
+  ]
 
   return (
     <>
-      
+     
+
       <h1>Vite + React</h1>
-      <ToDo task="Learn React" info={true}></ToDo>
-      <ToDo task="Revise React" info={false}></ToDo>
-      <ToDo task="Learn JS" info={true}></ToDo>
+
+      {
+        actors.map(actor => <Actor actor={actor}></Actor>)
+      }
+      {
+        singers.map(singer=> <Singer singer={singer}></Singer>)
+      }
+
+
+
+
+      {/* <ToDo task="Learn React" info={true} time='100'></ToDo>
+      <ToDo task="Revise React" info={false} ></ToDo>
+      <ToDo task="Learn JS" info={true} time='50'></ToDo> */}
       {/* <Pet ></Pet>
       <Det></Det>
       <Person name= "Jabir Siddique" age='24' ></Person>
@@ -22,28 +42,26 @@ function App() {
     </>
   )
 }
-function Pet()
-{
+function Pet() {
   return (
     <div className='catcss'>
 
       <h2>CAT</h2>
       <p>White color cat</p>
     </div>
-    
-    
-    )
+
+
+  )
 }
-function Det()
-{
+function Det() {
   return (
     <div style={
       {
-         padding: 10,
-         margin: 10,
-         borderRadius: 20,
-        backgroundColor:"red",
-        
+        padding: 10,
+        margin: 10,
+        borderRadius: 20,
+        backgroundColor: "red",
+
 
       }
     }>
@@ -51,29 +69,27 @@ function Det()
       <h2>DOG</h2>
       <p>Black color dog</p>
     </div>
-    
-    
-    )
+
+
+  )
 }
-function Person(prop)
-{
+function Person(prop) {
   console.log(prop)
-   return(
-    
-    <div className='catcss'>
-     <h2>Person</h2>
-     <p>Name :{prop.name } </p>
-     <p>Age:{prop.age}  </p>
-     </div>
-   )
-}
-function Player({name,run})
-{
   return (
-     <div className='catcss'>
-        <h2>Player Name : {name}</h2>
-        <p>Run :{run} </p>
-     </div>
+
+    <div className='catcss'>
+      <h2>Person</h2>
+      <p>Name :{prop.name} </p>
+      <p>Age:{prop.age}  </p>
+    </div>
+  )
+}
+function Player({ name, run }) {
+  return (
+    <div className='catcss'>
+      <h2>Player Name : {name}</h2>
+      <p>Run :{run} </p>
+    </div>
   )
 }
 
