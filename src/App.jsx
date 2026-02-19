@@ -10,7 +10,7 @@ function App() {
       <h1>Vite + React</h1>
       <Pet ></Pet>
       <Det></Det>
-      <Person></Person>
+      <Person name= "Jabir Siddique" age='24' ></Person>
 
     </>
   )
@@ -48,14 +48,15 @@ function Det()
     
     )
 }
-function Person()
+function Person(prop)
 {
+  console.log(prop)
    return(
     
     <div className='catcss'>
      <h2>Person</h2>
-     <p>Name : Jabir Siddique Talim</p>
-     <p>Life: Down </p>
+     <p>Name :{prop.name } </p>
+     <p>Age:{prop.age}  </p>
      </div>
    )
 }
