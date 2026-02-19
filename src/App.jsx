@@ -1,5 +1,6 @@
 
 import './App.css'
+import ToDo from './todo'
 
 function App() {
   
@@ -8,9 +9,15 @@ function App() {
     <>
       
       <h1>Vite + React</h1>
-      <Pet ></Pet>
+      <ToDo task="Learn React"></ToDo>
+      <ToDo task="Revise React"></ToDo>
+      <ToDo task="Learn JS"></ToDo>
+      {/* <Pet ></Pet>
       <Det></Det>
       <Person name= "Jabir Siddique" age='24' ></Person>
+      <Player name='Tamim Dalal' run='10000'></Player>
+      <Player name='sakib al hasan' run='20000'></Player> */}
+
 
     </>
   )
@@ -59,6 +66,15 @@ function Person(prop)
      <p>Age:{prop.age}  </p>
      </div>
    )
+}
+function Player({name,run})
+{
+  return (
+     <div className='catcss'>
+        <h2>Player Name : {name}</h2>
+        <p>Run :{run} </p>
+     </div>
+  )
 }
 
 
