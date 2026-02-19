@@ -1,6 +1,15 @@
-export default function(props)
+export default function({task,info})
 {
-  return(
-     <li>Task :{props.task}</li>
-  )
+  
+    
+    if(info)
+    {
+      return(<li>Done :{task}</li>)
+    }else
+    {
+      return(<li>To Do :{task}</li>)
+    }
+  
+     
+
 }

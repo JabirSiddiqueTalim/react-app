@@ -9,9 +9,9 @@ function App() {
     <>
       
       <h1>Vite + React</h1>
-      <ToDo task="Learn React"></ToDo>
-      <ToDo task="Revise React"></ToDo>
-      <ToDo task="Learn JS"></ToDo>
+      <ToDo task="Learn React" info={true}></ToDo>
+      <ToDo task="Revise React" info={false}></ToDo>
+      <ToDo task="Learn JS" info={true}></ToDo>
       {/* <Pet ></Pet>
       <Det></Det>
       <Person name= "Jabir Siddique" age='24' ></Person>
