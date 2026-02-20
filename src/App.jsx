@@ -3,6 +3,7 @@ import './App.css'
 import ToDo from './todo'
 import Actor from './Actor'
 import Singer from './Singers';
+import Doctor from './Doctor';
 
 function App() {
 
@@ -11,20 +12,33 @@ function App() {
     { id:'1', name :'Jabir', age:'10' },
     { id:'2', name :'Aabir', age:'20' },
     { id:'3', name :'Kabir', age:'30' }
-  ]
+  ];
+  const doctors=['Dr faiza','Dr mahi','Dr sallu'];
 
   return (
     <>
+
+    {
+
+    }
      
 
       <h1>Vite + React</h1>
+     
+ 
+     {
+          doctors.map(doctor => <Doctor name ={doctor}></Doctor>)
 
+     }
+
+{/* 
       {
         actors.map(actor => <Actor actor={actor}></Actor>)
       }
       {
         singers.map(singer=> <Singer singer={singer}></Singer>)
       }
+ */}
 
 
 
